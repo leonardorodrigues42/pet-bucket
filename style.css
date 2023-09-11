@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Irish+Grover:regular);
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  align-items: center;
+}
+
+#logo {
+  font-family: "Irish Grover", sans-serif;
+}
+
+#menu-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+main {
+  height: 100%;
+}
+
+.menu h2,
+h3 {
+  margin: 0;
+  font-family: "Irish Grover";
+  text-align: center;
+  padding: 10px;
+}
+
+.menu ul {
+  width: 220px;
+  height: 100%;
+  list-style: none;
+  background-color: #f0f0f0;
+  padding: 0;
+  display: none; /* Inicialmente, o menu está fechado por padrão */
+}
+
+.menu div {
+  margin: 15px;
+}
+
+.menu li {
+  margin: 0;
+  padding: 0;
+  font-family: "Irish Grover";
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #ccc;
+}
+
+/* Estilo para o conteúdo principal */
+.content {
+  margin-left: 0; /* O conteúdo principal fica à esquerda do menu fechado */
+  padding: 20px;
+}
+
+/* Quando o menu é aberto, move o conteúdo principal para a direita */
+.menu.open + .content {
+  margin-left: 250px;
+}
